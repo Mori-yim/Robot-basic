@@ -135,7 +135,7 @@ text
 
 text
 
----
+
 
 ##  Exemples d'Utilisation
 
@@ -429,8 +429,6 @@ Push (git push origin feature/Amelioration)
 
 Ouvrez une Pull Request
 
- Licence
-Distribué sous licence MIT. Voir LICENSE pour plus d'informations.
 
  Auteur
 Morino - Étudiant en informatique
