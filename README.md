@@ -83,55 +83,55 @@ text
 ---
 
 ##  Diagramme des Classes
-┌─────────────────────────────────────────────────────────────────────┐
-│ ROBOT │
-│ ───────────────────────────────────────────────────────────────── │
-│ - nom: String │
-│ - x: int │
-│ - y: int │
-│ - direction: String │
-│ + Robot(nom: String) │
-│ + Robot(nom: String, x: int, y: int) │
-│ + Robot(nom: String, x: int, y: int, direction: String) │
-│ + avance(): void │
-│ + droite(): void │
-│ + afficher(): void │
-│ + toString(): String │
-│ + getX(): int, getY(): int, getNom(): String, getDirection(): String│
-└───────────────────────────────────┬─────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐<br>
+│ ROBOT │<br>
+│ ───────────────────────────────────────────────────────────────── │<br>
+│ - nom: String │<br>
+│ - x: int │<br>
+│ - y: int │<br>
+│ - direction: String │<br>
+│ + Robot(nom: String) │<br>
+│ + Robot(nom: String, x: int, y: int) │<br>
+│ + Robot(nom: String, x: int, y: int, direction: String) │<br>
+│ + avance(): void │<br>
+│ + droite(): void │<br>
+│ + afficher(): void │<br>
+│ + toString(): String │<br>
+│ + getX(): int, getY(): int, getNom(): String, getDirection(): String│<br>
+└───────────────────────────────────┬─────────────────────────────────┘<br>
+│<br>
+│ extends<br>
+│<br>
+┌───────────────────────────────────▼─────────────────────────────────┐<br>
+│ ROBOTNG │<br>
+│ ───────────────────────────────────────────────────────────────── │<br>
+│ + RobotNG(nom: String) │<br>
+│ + RobotNG(nom: String, x: int, y: int) │<br>
+│ + RobotNG(nom: String, x: int, y: int, direction: String) │<br>
+│ + avance(nbPas: int): void │<br>
+│ + gauche(): void │<br>
+│ + demiTour(): void │<br>
+│ + afficher(): void (override) │<br>
+│ + toString(): String (override) │<br>
+└───────────────────────────────────┬─────────────────────────────────┘<br>
 │
-│ extends
-│
-┌───────────────────────────────────▼─────────────────────────────────┐
-│ ROBOTNG │
-│ ───────────────────────────────────────────────────────────────── │
-│ + RobotNG(nom: String) │
-│ + RobotNG(nom: String, x: int, y: int) │
-│ + RobotNG(nom: String, x: int, y: int, direction: String) │
-│ + avance(nbPas: int): void │
-│ + gauche(): void │
-│ + demiTour(): void │
-│ + afficher(): void (override) │
-│ + toString(): String (override) │
-└───────────────────────────────────┬─────────────────────────────────┘
-│
-┌───────────────┴───────────────┐
-│ extends │ extends
-▼
-┌───────────────────────────────┐ ┌───────────────────────────────────┐
-│ ROBOTNGEFFICACE │ │ ROBOTNGTURBO │
-│ ─────────────────────────────│ │ ─────────────────────────────────│
-│ - (même constructeurs) │ │ - turboActive: boolean │
-│ + avance(nbPas: int): void │ │ + activerTurbo(): void │
-│ (version directe) │ │ + desactiverTurbo(): void │
-│ + gauche(): void (direct) │ │ + isTurboActive(): boolean │
-│ + demiTour(): void (direct) │ │ + avance(): void (override Turbo) │
-│ + afficher(): void (override)│ │ + avance(nbPas: int): void │
-│ + toString(): String │ │ + gauche(): void │
-└───────────────────────────────┘ │ + demiTour(): void │
-│ + afficher(): void (override) │
-│ + toString(): String │
-└───────────────────────────────────┘
+┌───────────────┴───────────────┐<br>
+│ extends │ extends<br>
+▼<br>
+┌───────────────────────────────┐ ┌───────────────────────────────────┐<br>
+│ ROBOTNGEFFICACE │ │ ROBOTNGTURBO │<br>
+│ ─────────────────────────────│ │ ─────────────────────────────────│<br>
+│ - (même constructeurs) │ │ - turboActive: boolean │<br>
+│ + avance(nbPas: int): void │ │ + activerTurbo(): void │<br>
+│ (version directe) │ │ + desactiverTurbo(): void │<br>
+│ + gauche(): void (direct) │ │ + isTurboActive(): boolean │<br>
+│ + demiTour(): void (direct) │ │ + avance(): void (override Turbo) │<br>
+│ + afficher(): void (override)│ │ + avance(nbPas: int): void │<br>
+│ + toString(): String │ │ + gauche(): void │<br>
+└───────────────────────────────┘ │ + demiTour(): void │<br>
+│ + afficher(): void (override) │<br>
+│ + toString(): String │<br>
+└───────────────────────────────────┘<br>
 
 text
 
